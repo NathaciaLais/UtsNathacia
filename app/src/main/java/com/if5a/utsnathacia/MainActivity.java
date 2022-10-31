@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btndaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"Konfirmasi Pendaftaran"), Toast.LENGTH_SHORT)
+                
 
             }
         });
