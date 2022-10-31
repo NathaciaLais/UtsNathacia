@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Uts Nathacia</string>
+    <string-array name="arr_jalur">
+        <item>test</item>
+        <item>test tertulis</item>
+        <item>test wawancara</item>
+        <item>rekomendasi</item>
+    </string-array>
+</resources>

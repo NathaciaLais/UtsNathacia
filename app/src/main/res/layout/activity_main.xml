@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulir Pendaftaran"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        android:inputType="text"
+        android:layout_below="@id/tv_judul"/>
+    <EditText
+        android:id="@+id/et_nomor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nomor pendaftaran"
+        android:inputType="number"
+        android:layout_below="@id/et_nama"/>
+    <Spinner
+        android:id="@+id/sp_jalur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_nomor"
+       android:entries="@array/arr_jalur"/>
+    <CheckBox
+        android:id="@+id/cb_konfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Konfirmasi Pendaftaran"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@id/sp_jalur"/>
+    <Button
+        android:id="@+id/btn_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Dafrtar"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+</RelativeLayout>
