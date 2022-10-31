@@ -17,4 +17,30 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_judul"
+        android:layout_marginTop="-544dp"
+        android:text="Nama" />
+
+    <TextView
+        android:id="@+id/tv_nomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor"
+        android:layout_below="@id/tv_nama"  />
+
+    <TextView
+        android:id="@+id/tv_jalur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jalur"
+        android:layout_below="@id/tv_nomor"/>
+
+
+
+
+
 </RelativeLayout>
