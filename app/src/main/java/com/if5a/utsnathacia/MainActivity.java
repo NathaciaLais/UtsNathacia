@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btndaftar;
     private EditText etnama,etnomor;
     private Spinner spjalur;
+    private CheckBox cb_konfirmasi;
 
 
 
@@ -33,12 +35,7 @@ public class MainActivity extends AppCompatActivity {
         etnama = findViewById(R.id.et_nama);
         etnomor = findViewById(R.id.et_nomor);
         spjalur = findViewById(R.id.sp_jalur);
-        spjalur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Jalur Pendaftaran",Toast.LENGTH_LONG).show();
-            }
-        });
+        cb_konfirmasi= findViewById(R.id.cb_konfirmasi);
         btndaftar = findViewById(R.id.btn_daftar);
         btndaftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +44,19 @@ public class MainActivity extends AppCompatActivity {
 
                 nama = etnama.getText().toString();
                 nomor = etnomor.getText().toString();
-                                if (nama.trim().equals("")){
+                jalur =spjalur.getSelectedItem().toString();
+                if (nama.trim().equals("")){
                     etnama.setError("Nama tidak boleh kosong");
                 }
                 else if (nomor.trim().equals("")){
                     etnomor.setError("Nomor tidak boleh kosong");
+
+                }
+                else if (jalur.trim().equals("Jalur Pendaftaran")){
+                    Toast.makeText(MainActivity.this, "Pilih Jalur Pendaftaran", Toast.LENGTH_SHORT).show();
+                }
+                else if (!(cb_konfirmasi.isChecked())){
+                    Toast.makeText(MainActivity.this, "CheckBox belum dicentang", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Intent daftar =new Intent(MainActivity.this, SecondActivity.class);
